@@ -16,7 +16,6 @@ export let init = async function () {
         token.set(authData.token);
         userData.set(authData.record);
         isLoggedIn.set(true);
-        goto("/servers");
     }
 }
 

@@ -16,6 +16,9 @@
       {:else}
         <li><a href="/settings">Settings</a></li>
         <li><a href="/servers">Servers</a></li>
+        <li><a href="/volumes">Volumes</a></li>
+        <li><a href="/load_balancer">Load Balancer</a></li>
+        <li><a href="/networks">Networks</a></li>
         <li><a href="/logout">Logout</a></li>
       {/if}
     </ul>

@@ -1,7 +1,7 @@
 {
-    "short_name": "PWA",
-    "name": "PWA Template by MkaY Development",
-    "description": "PWA Template by MkaY Development",
+    "short_name": "HPWA",
+    "name": "Hetzner App by MkaY Development",
+    "description": "Hetzner App by MkaY Development",
     "icons": [
         {
             "src": "/images/icons-vector.svg",
