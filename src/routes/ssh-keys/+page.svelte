@@ -44,7 +44,7 @@
     <section class="actions">
       <button
         on:click={function () {
-          goto("/ssh_key/create");
+          goto("/ssh-key/create");
         }}><Fa icon={faPlus} /></button
       >
       <button

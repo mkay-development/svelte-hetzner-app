@@ -68,7 +68,7 @@
         <a href="/network/{item.id}">{item.id}</a>
       </div>
       <div class="col-span-6 md:col-span-2">{item.name}</div>
-      <div class="col-span-6 md:col-span-2">{item.ip_range}</div>
+      <div class="col-span-6 md:col-span-6">{item.ip_range}</div>
       <div class="col-span-6 md:col-span-2 flex space-x-5">
         <button
           on:click={function () {

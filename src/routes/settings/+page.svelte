@@ -80,22 +80,6 @@
         <button
           class="bg-white px-2 py-2 w-full"
           on:click={function () {
-            goto("/settings/ssh_keys");
-          }}>SSH Keys</button
-        >
-      </div>
-      <div class="col-span-6 md:col-span-3">
-        <button
-          class="bg-white px-2 py-2 w-full"
-          on:click={function () {
-            goto("/settings/volumes");
-          }}>Volumes</button
-        >
-      </div>
-      <div class="col-span-6 md:col-span-3">
-        <button
-          class="bg-white px-2 py-2 w-full"
-          on:click={function () {
             goto("/settings/load_balancer_types");
           }}>LB Types</button
         >
