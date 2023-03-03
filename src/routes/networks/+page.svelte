@@ -1,6 +1,5 @@
 <script lang="ts">
     import {
-      faEdit,
       faPlus,
       faRotateRight,
       faTrash,
@@ -71,11 +70,6 @@
       <div class="col-span-6 md:col-span-2">{item.name}</div>
       <div class="col-span-6 md:col-span-2">{item.ip_range}</div>
       <div class="col-span-6 md:col-span-2 flex space-x-5">
-        <button
-          on:click={function () {
-            goto("/network/" + item.id + "/edit");
-          }}><Fa icon={faEdit} /></button
-        >
         <button
           on:click={function () {
             removeNetwork(item.id);

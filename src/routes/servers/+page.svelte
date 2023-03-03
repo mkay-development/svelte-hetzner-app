@@ -1,6 +1,5 @@
 <script lang="ts">
   import {
-    faEdit,
     faPlus,
     faRotateRight,
     faTrash,

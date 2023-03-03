@@ -10,7 +10,7 @@ export const init = function () {
     })
         .then((response) => response.json())
         .then((data) => {
-            localStorage.setItem("networks", JSON.stringify(data.ssh_keys));
+            localStorage.setItem("ssh_keys", JSON.stringify(data.ssh_keys));
             ssh_keys.set(data.ssh_keys);
         })
         .catch((error) => {
