@@ -18,12 +18,12 @@ export let load = function () {
         init();
     }
     else {
-        tokens.set(JSON.parse(localStorage.getItem('selected_token') || '{}') || '');
+        tokens.set(JSON.parse(localStorage.getItem('selected_token') || '') || '');
     }
 }
 
 selected_token.subscribe((value) => {
-    if (browser) {
+    if (browser && value != '') {
         localStorage.setItem('selected_token', value);
     }
 });

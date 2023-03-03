@@ -3,70 +3,55 @@
 
 ## Todos
 
-### Multi Token Managment
+### &#9744; Multi Token Managment
 
 #### Servers
 - &#9746; C <br>
+- &#9746; R <br>
+- &#9744; U <br>
+- &#9746; D <br>
+
+#### Networks
+- &#9746; C <br>
+- &#9744; R <br>
+- &#9744; U <br>
+- &#9746; D <br>
+
+#### Load Balancer
+- &#9744; C <br>
 - &#9744; R <br>
 - &#9744; U <br>
 - &#9744; D <br>
-</ul>
-
-#### Networks
-<ul>
-<li>C</li>
-<li>R</li>
-<li>U</li>
-<li>D</li>
-</ul>
-
-#### Load Balancer
-<ul>
-<li>C</li>
-<li>R</li>
-<li>U</li>
-<li>D</li>
-</ul>
 
 #### Certs
-<ul>
-<li>C</li>
-<li>R</li>
-<li>U</li>
-<li>D</li>
-</ul>
+- &#9744; C <br>
+- &#9744; R <br>
+- &#9744; U <br>
+- &#9744; D <br>
 
 #### Firewalls
-<ul>
-<li>C</li>
-<li>R</li>
-<li>U</li>
-<li>D</li>
-</ul>
+- &#9744; C <br>
+- &#9744; R <br>
+- &#9744; U <br>
+- &#9744; D <br>
 
 #### Floating Ips
-<ul>
-<li>C</li>
-<li>R</li>
-<li>U</li>
-<li>D</li>
-</ul>
+- &#9744; C <br>
+- &#9744; R <br>
+- &#9744; U <br>
+- &#9744; D <br>
 
 #### SSH KEys
-<ul>
-<li>C</li>
-<li>R</li>
-<li>U</li>
-<li>D</li>
-</ul>
+- &#9744; C <br>
+- &#9744; R <br>
+- &#9744; U <br>
+- &#9744; D <br>
 
 #### Volumes
-<ul>
-<li>C</li>
-<li>R</li>
-<li>U</li>
-<li>D</li>
-</ul>
+- &#9744; C <br>
+- &#9744; R <br>
+- &#9744; U <br>
+- &#9744; D <br>
 
 GET Locations
 GET ISOs

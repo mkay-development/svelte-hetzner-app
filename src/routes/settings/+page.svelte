@@ -4,16 +4,16 @@
   import { onMount } from "svelte";
   import { faEdit } from "@fortawesome/free-solid-svg-icons";
   import Fa from "svelte-fa";
-  import { load, selected_token,tokens } from "../../stores/hetzner";
-
-  let newToken = "";
+  import { load, selected_token, tokens } from "../../stores/hetzner";
 
   onMount(async () => {
     load();
   });
 
-  let change = function () {
-    selected_token.set(newToken);
+  let changeToken = function (token) {
+    if (token != "") {
+      selected_token.set(token);
+    }
   };
 </script>
 
@@ -37,14 +37,21 @@
     <div class="form">
       {#each $tokens as token}
         <div class="form-control mt-2 flex">
-          <label for="token-{token.id}" class="md:w-32 mt-1">{token.name}</label
-          >
+          <label
+            for="token-{token.id}"
+            class="md:w-32 mt-1 flex justify-between"
+            >{token.name}
+            <input
+              type="radio"
+              name="token"
+              on:click={function () {
+                changeToken(token.token);
+              }}
+            />
+          </label>
           <input
             type="text"
             id="token-{token.id}"
-            on:change={function () {
-              updateToken(token.id, token.token);
-            }}
             bind:value={token.token}
             class="w-full px-2 py-2 bg-white text-sm"
             placeholder="Your Token"
