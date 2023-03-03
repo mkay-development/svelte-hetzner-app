@@ -10,7 +10,7 @@
   import { goto } from "$app/navigation";
   import { load, certificates, init } from "../../stores/certificates";
 
-  let removeCertifcate = function (id: Number) {
+  let removeCertifcate = function (id: number) {
     if (
       confirm(
         "Are you realy sure that you want to delete the Cert with the id " +

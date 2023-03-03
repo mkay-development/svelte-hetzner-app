@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
-  import { stringify } from "postcss";
   import { onMount } from "svelte";
+  import VolumeCard from "$lib/components/VolumeCard.svelte";
 
   let item = {};
 
@@ -24,8 +24,6 @@
     load();
   });
 </script>
-
-{JSON.stringify(item)}
 Volumes labels protection locked rescue_enabled
 
 <div class="grid grid-cols-6 gap-3">
@@ -40,6 +38,7 @@ Volumes labels protection locked rescue_enabled
   </div>
   {#if item.server_type}
     <div class="col-span-6 md:col-span-4">
+      <h2 class="font-bold text-lg mb-3">Typ:</h2>
       <div class="grid grid-cols-12 bg-gray-400 px-2 text-sm py-2 font-bold">
         <div class="col-span-6 md:col-span-2">ID</div>
         <div class="col-span-6 md:col-span-2">Name</div>
@@ -116,5 +115,18 @@ Volumes labels protection locked rescue_enabled
       </div>
     </div>
   {/if}
-  {JSON.stringify(item.volumes)}
+  <div class="col-span-6 md:col-span-2">
+
+  </div>
+  <div class="col-span-6 md:col-span-4">
+    <div class="grid grid-cols-6">
+      <div class="col-span-6 md:col-span-3">
+        {#if item.volumes}
+          {#each item.volumes as volume}
+            <VolumeCard identifier={volume} />
+          {/each}
+        {/if}
+      </div>
+    </div>
+  </div>
 </div>

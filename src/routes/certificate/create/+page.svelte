@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { certificates } from "./../../../stores/certificates.ts";
-  import { onMount } from "svelte";
   import { goto } from "$app/navigation";
 
   let form = {
@@ -25,8 +23,6 @@
         }
       });
   };
-
-  onMount(() => {});
 </script>
 
 <div class="grid grid-cols-6">

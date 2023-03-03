@@ -1,7 +1,6 @@
 import { writable } from "svelte/store";
 import PocketBase from "pocketbase";
 import { browser } from "$app/environment";
-import { goto } from "$app/navigation";
 
 export let token = writable('');
 export let userData = writable({});

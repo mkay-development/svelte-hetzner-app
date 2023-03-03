@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
 
-export let init = function () {
+export const init = function () {
     fetch("https://api.hetzner.cloud/v1/ssh_keys", {
         method: "GET",
         headers: {
@@ -18,7 +18,7 @@ export let init = function () {
         });
 };
 
-export let load = function () {
+export const load = function () {
     if (localStorage.getItem('ssh_keys') == null) {
         init();
     }
@@ -27,4 +27,4 @@ export let load = function () {
     }
 }
 
-export let ssh_keys = writable([]);
+export const ssh_keys = writable([]);

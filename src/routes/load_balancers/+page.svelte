@@ -10,7 +10,7 @@
   import { goto } from "$app/navigation";
   import { load, load_balancers, init } from "../../stores/load_balancers";
 
-  let removeLoadBalancer = function (id: Number) {
+  let removeLoadBalancer = function (id: number) {
     if (
       confirm(
         "Are you realy sure that you want to delete the Load Balancer with the id " +
@@ -28,7 +28,7 @@
         .then(() => {
           load();
         })
-        .catch((error) => {
+        .catch(() => {
           load();
         });
     }

@@ -10,7 +10,7 @@
     import { goto } from "$app/navigation";
     import { load, ssh_keys, init } from "../../stores/ssh_keys";
   
-    let removeSshKey = function (id: Number) {
+    let removeSshKey = function (id: number) {
       if (
         confirm(
           "Are you realy sure that you want to delete the SSh Key with the id " +

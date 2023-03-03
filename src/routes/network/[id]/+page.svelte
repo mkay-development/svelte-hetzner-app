@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { networks } from "./../../../stores/networks.ts";
   import { page } from "$app/stores";
   import { onMount } from "svelte";
 

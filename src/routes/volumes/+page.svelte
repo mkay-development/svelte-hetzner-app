@@ -10,7 +10,7 @@
   import { goto } from "$app/navigation";
   import { load, volumes, init } from "../../stores/volumes";
 
-  let removeVolume = function (id: Number) {
+  let removeVolume = function (id: number) {
     if (
       confirm(
         "Are you realy sure that you want to delete the Volume with the id " +
@@ -28,7 +28,7 @@
         .then(() => {
           load();
         })
-        .catch((error) => {
+        .catch(() => {
           load();
         });
     }

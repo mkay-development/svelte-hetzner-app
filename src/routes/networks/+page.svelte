@@ -10,7 +10,7 @@
     import { goto } from "$app/navigation";
     import { load, networks, init } from "../../stores/networks";
   
-    let removeNetwork = function (id: Number) {
+    let removeNetwork = function (id: number) {
       if (
         confirm(
           "Are you realy sure that you want to delete the Server with the id " +

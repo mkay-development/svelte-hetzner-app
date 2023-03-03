@@ -1,18 +1,18 @@
 import { writable } from "svelte/store";
 
-export let init = async function () {
-    let response = await fetch("https://api.hetzner.cloud/v1/networks", {
+export const init = async function () {
+    const response = await fetch("https://api.hetzner.cloud/v1/networks", {
         headers: {
             Authorization: "Bearer " + localStorage.getItem("selected_token"),
         },
     });
-    let data = await response.json();
+    const data = await response.json();
     if (data.networks) {
         networks.set(data.networks);
     }
 };
 
-export let load = function () {
+export const load = function () {
     if (localStorage.getItem('networks') == null) {
         init();
     }
@@ -21,4 +21,4 @@ export let load = function () {
     }
 }
 
-export let networks = writable([]);
+export const networks = writable([]);

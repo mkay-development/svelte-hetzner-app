@@ -10,7 +10,7 @@
   import { goto } from "$app/navigation";
   import { load, servers, init } from "../../stores/servers";
 
-  let removeServer = function (id: Number) {
+  let removeServer = function (id: number) {
     if (
       confirm(
         "Are you realy sure that you want to delete the Server with the id " +
