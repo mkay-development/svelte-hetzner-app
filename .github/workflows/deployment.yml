@@ -12,4 +12,4 @@ jobs:
         host: 91.107.235.64
         username: root
         key: ${{ secrets.KEY }}
-        script: cd /var/www/svelte.hetzner.app && yarn && yarn build
+        script: cd /mnt/frontend-3/svelte.hetzner.app && git pull && yarn && yarn build
