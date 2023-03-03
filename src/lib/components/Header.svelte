@@ -1,5 +1,5 @@
 <script>
-  import { faBars } from "@fortawesome/free-solid-svg-icons";
+  import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
   import { onMount } from "svelte";
   import { init, isLoggedIn } from "../../stores/user";
   import Fa from "svelte-fa";
@@ -29,26 +29,42 @@
     </ul>
   </nav>
   <nav class="md:hidden">
-    <button
-      on:click={function () {
-        open.set(!$open);
-      }}><Fa icon={faBars} class="mt-1" size="1.5x" /></button
-    >
+    {#if $open}
+      <button
+        on:click={function () {
+          open.set(!$open);
+        }}><Fa icon={faTimes} class="mt-1" size="1.5x" /></button
+      >
+    {:else}
+      <button
+        on:click={function () {
+          open.set(!$open);
+        }}><Fa icon={faBars} class="mt-1" size="1.5x" /></button
+      >
+    {/if}
   </nav>
 </header>
-<section class="mobile-content px-2 py-2 bg-white mx-2 my-2 md:hidden">
-  <div class="grid grid-cols-8 gap-3">
-    <div class="col-span-4 sm:col-span-2"><a href="/settings">Settings</a></div>
-    <div class="col-span-4 sm:col-span-2"><a href="/servers">Servers</a></div>
-    <div class="col-span-4 sm:col-span-2"><a href="/ssh-keys">SSH Keys</a></div>
-    <div class="col-span-4 sm:col-span-2">
-      <a href="/certificates">Certs</a>
+{#if $open}
+  <section class="mobile-content px-2 py-2 bg-white mx-2 my-2 md:hidden">
+    <div class="grid grid-cols-8 gap-3">
+      <div class="col-span-4 sm:col-span-2">
+        <a href="/settings">Settings</a>
+      </div>
+      <div class="col-span-4 sm:col-span-2"><a href="/servers">Servers</a></div>
+      <div class="col-span-4 sm:col-span-2">
+        <a href="/ssh-keys">SSH Keys</a>
+      </div>
+      <div class="col-span-4 sm:col-span-2">
+        <a href="/certificates">Certs</a>
+      </div>
+      <div class="col-span-4 sm:col-span-2"><a href="/volumes">Volumes</a></div>
+      <div class="col-span-4 sm:col-span-2">
+        <a href="/load-balancers">Load Balancer</a>
+      </div>
+      <div class="col-span-4 sm:col-span-2">
+        <a href="/networks">Networks</a>
+      </div>
+      <div class="col-span-4 sm:col-span-2"><a href="/logout">Logout</a></div>
     </div>
-    <div class="col-span-4 sm:col-span-2"><a href="/volumes">Volumes</a></div>
-    <div class="col-span-4 sm:col-span-2">
-      <a href="/load-balancers">Load Balancer</a>
-    </div>
-    <div class="col-span-4 sm:col-span-2"><a href="/networks">Networks</a></div>
-    <div class="col-span-4 sm:col-span-2"><a href="/logout">Logout</a></div>
-  </div>
-</section>
+  </section>
+{/if}
