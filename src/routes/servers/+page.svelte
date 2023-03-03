@@ -75,11 +75,6 @@
     <div class="col-span-6 md:col-span-2 flex space-x-5">
       <button
         on:click={function () {
-          goto("/server/" + item.id + "/edit");
-        }}><Fa icon={faEdit} /></button
-      >
-      <button
-        on:click={function () {
           removeServer(item.id);
         }}
         class="px-2 py-2 bg-white"><Fa icon={faTrash} /></button
