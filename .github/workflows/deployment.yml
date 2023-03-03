@@ -9,7 +9,7 @@ jobs:
     - name: executing remote ssh commands using key
       uses: appleboy/ssh-action@v0.1.7
       with:
-        host: 5.75.170.66
+        host: 91.107.235.64
         username: root
         key: ${{ secrets.KEY }}
-        script: cd /var/www/projects.mkay-development.de && sh build.sh
+        script: cd /var/www/svelte.hetzner.app && yarn && yarn build
