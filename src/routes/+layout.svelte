@@ -2,7 +2,9 @@
   import "../tailwind.css";
   import Fa from "svelte-fa";
   import {
+    faGear,
     faHeart,
+    faList,
     faRightFromBracket,
     faUser,
   } from "@fortawesome/free-solid-svg-icons";
@@ -13,6 +15,14 @@
     init();
   });
 </script>
+
+<svelte:head
+  ><script
+    defer
+    data-domain="hetzner.app"
+    src="https://bhkenqpeta4iu6t.plausible.dev/js/script.js"
+  ></script></svelte:head
+>
 
 <header class="mx-auto max-w-5xl my-2 flex justify-between px-2 py-2">
   <h1 class="text-xl font-bold flex">
@@ -28,7 +38,10 @@
 
       {#if $isLoggedIn}
         <li>
-          <a href="/user/profile"><Fa icon={faUser} size="1.5x" /></a>
+          <a href="/dashboard"><Fa icon={faList} size="1.5x" /></a>
+        </li>
+        <li>
+          <a href="/settings"><Fa icon={faGear} size="1.5x" /></a>
         </li>
         <li>
           <a href="/logout"><Fa icon={faRightFromBracket} size="1.5x" /></a>
