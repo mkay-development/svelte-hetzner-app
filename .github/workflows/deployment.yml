@@ -12,7 +12,7 @@ jobs:
     - name: executing remote ssh commands using key
       uses: appleboy/ssh-action@v0.1.7
       with:
-        host: 5.75.170.66
+        host: 195.201.38.163
         username: root
         key: ${{ secrets.KEY }}
-        script: cd /mnt/frontend-3/www.hetzner.app && git pull && yarn && yarn build
+        script: cd /var/www/www.hetzner.app && git pull && yarn && yarn build
