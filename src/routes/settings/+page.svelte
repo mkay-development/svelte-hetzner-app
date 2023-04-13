@@ -1,12 +1,10 @@
 <script>
   import { htokens, add } from "../../stores/hetzner";
 
-  let t = "";
+  let t = '';
 </script>
 
 <h2 class="font-bold text-lg">Test</h2>
-
-{$htokens}
 
 <div class="grid grid-cols-6">
   <div class="col-span-6 md:col-span-2">
