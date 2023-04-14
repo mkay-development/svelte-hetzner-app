@@ -7,6 +7,7 @@ export const htoken = writable('');
 export const init = function () {
     if (browser) {
         htoken.set(localStorage.getItem('htoken'));
+        htokens.set(JSON.parse(localStorage.getItem('htokens')));
     }
 }
 
