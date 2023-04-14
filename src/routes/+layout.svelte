@@ -1,4 +1,5 @@
 <script>
+  import Notes from "./../lib/components/Notes.svelte";
   import "../tailwind.css";
   import Fa from "svelte-fa";
   import {
@@ -10,9 +11,14 @@
   } from "@fortawesome/free-solid-svg-icons";
   import { init, isLoggedIn } from "../stores/user";
   import { onMount } from "svelte";
+  import { addNote } from "../stores/notes";
 
   onMount(function () {
     init();
+    addNote({
+      status: "warning",
+      text: "Dies ist keine offizielle Webseite von der Hetzner Online GmbH, sondern ein Service von MkaY Development.",
+    });
   });
 </script>
 
@@ -50,6 +56,8 @@
     </ul>
   </nav>
 </header>
+
+<section class="max-w-5xl mx-auto"><Notes /></section>
 
 <main class="mx-auto max-w-5xl my-2 px-2 py-2"><slot /></main>
 
