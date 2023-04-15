@@ -7,6 +7,9 @@
 
   onMount(function () {
     load();
+    setInterval(() => {
+      load();
+    }, 10000);
   });
 </script>
 
@@ -36,10 +39,10 @@
       <div class="col-span-6 md:col-span-2">{server.id}</div>
       <div class="col-span-6 md:col-span-2">{server.name}</div>
       <div class="col-span-6 md:col-span-2">{server.status}</div>
-      <div class="col-span-6 md:col-span-2">{server.created}</div>
+      <div class="col-span-6 md:col-span-4">{server.created}</div>
       <div class="col-span-12 md:col-span-2">
         <button
-          class="bg-gray-400 px-2 py-2"
+          class="bg-gray-400 px-2 py-2 text-sm"
           on:click={function () {
             if (
               confirm(
