@@ -1,6 +1,6 @@
 <script>
     import Fa from "svelte-fa";
-    import { faCircleExclamation, faCircleRadiation, faExclamationTriangle, faInfoCircle, faTriangleCircleSquare } from "@fortawesome/free-solid-svg-icons";
+    import { faCircleExclamation, faExclamationTriangle, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
     import { items } from "../../stores/notes";
   </script>
   

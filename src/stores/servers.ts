@@ -1,10 +1,10 @@
 import { writable, get } from "svelte/store";
-import { htoken, init } from "./hetzner";
+import { init } from "./hetzner";
 import { browser } from "$app/environment";
 
 export const servers = writable([]);
 
-export let addServer = function (server) {
+export const addServer = function (server) {
     servers.set([...get(servers), ...[server]])
 }
 
