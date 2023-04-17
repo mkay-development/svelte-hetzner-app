@@ -30,7 +30,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fortawesome/free-brands-svg-icons": "^6.3",
-		"@fortawesome/free-solid-svg-icons": "^6.2",
+		"@fortawesome/free-solid-svg-icons": "^6.4",
 		"@sveltejs/adapter-static": "^2.0",
 		"pocketbase": "^0.13.1",
 		"svelte-fa": "^3.0",
